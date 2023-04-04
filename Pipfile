@@ -9,6 +9,7 @@ djangorestframework = "*"
 django-dotenv = "*"
 pytest-django = "*"
 django-mptt = "*"
+drf-spectacular = "*"
 
 [dev-packages]
 black = "*"
