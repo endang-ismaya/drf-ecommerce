@@ -9,6 +9,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 router = DefaultRouter()
 router.register(r"categories", views.CategoryView)
+router.register(r"brands", views.BrandView)
 
 
 urlpatterns = [

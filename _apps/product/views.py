@@ -16,3 +16,16 @@ class CategoryView(viewsets.ViewSet):
     def list(self, request):
         serializer = serializers.CategorySerializer(self.queryset, many=True)
         return Response(serializer.data)
+
+
+class BrandView(viewsets.ViewSet):
+    """
+    A simple ViewSet for Viewing all brands
+    """
+
+    queryset = models.Brand.objects.all()
+
+    @extend_schema(responses=serializers.BrandSerializer)
+    def list(self, request):
+        serializer = serializers.BrandSerializer(self.queryset, many=True)
+        return Response(serializer.data)
