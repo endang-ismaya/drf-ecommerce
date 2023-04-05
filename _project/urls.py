@@ -8,8 +8,9 @@ from _apps.product import views
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 router = DefaultRouter()
-router.register(r"categories", views.CategoryView)
-router.register(r"brands", views.BrandView)
+router.register(r"categories", views.CategoryViewSet)
+router.register(r"brands", views.BrandViewSet)
+router.register(r"products", views.ProductViewSet)
 
 
 urlpatterns = [
